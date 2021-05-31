@@ -1,4 +1,3 @@
-
 //constant variables
 const IS_PART_TIME = 1;
 const IS_FULL_TIME = 2;
@@ -7,7 +6,6 @@ const FULL_TIME_HOURS = 8;
 const WAGE_PER_HOUR = 20;
 const MAX_HRS_IN_MONTH = 160;
 const MAX_NUM_OF_WORKING_DAYS = 20;
-
 
 function getWorkingHours(empCheck) {
   switch (empCheck) {
@@ -24,7 +22,6 @@ function getWorkingHours(empCheck) {
 function calculateDailyWage(empHrs) {
   return empHrs * WAGE_PER_HOUR;
 }
-
 
 let totalEmployeeHrs = 0;
 let day = 0;
@@ -52,11 +49,8 @@ console.log(
     empWage
 );
 
-
- // total wage calculation using forEach method
- 
-let totalWage = 0;
-
+// total wage calculation using forEach method
+ let totalWage = 0;
 
 function sum(dailyWage) {
   totalWage += dailyWage;
@@ -72,10 +66,8 @@ console.log(
     totalWage
 );
 
-
- // using reduce method
- 
-function totalWages(totalWage, dailyWage) {
+// using reduce method
+ function totalWages(totalWage, dailyWage) {
   return totalWage + dailyWage;
 }
 console.log(
@@ -102,10 +94,8 @@ console.log(
     mapDayWithWageArray.some(isAnyPartTimeWage)
 );
 
-
 //  Finds the number of days that employee worked
- 
-function totalDaysWorked(numOfDays, dailyWage) {
+ function totalDaysWorked(numOfDays, dailyWage) {
   //console.log("DailyWage"+dailyWage);
   if (dailyWage > 0) {
     return numOfDays + 1;
@@ -119,16 +109,14 @@ console.log(
 
 
  // 8 Map functions
- 
-console.log(
+ console.log(
   "Emp wage map total hrs: " +
     Array.from(empDailyWageMap.values()).reduce(totalWages, 0)
 );
 
 
  // Arrow functions
- 
-const findTotal = (totalVal, dailyVal) => {
+ const findTotal = (totalVal, dailyVal) => {
   return totalVal + dailyVal;
 };
 
