@@ -67,7 +67,7 @@
    "total days: " +
      day +
      " and total hrs: " +
-     totalEmployeeHrs +
+      totalEmployeeHrs +
      ", Emp wage: " +
      empWage
  );
